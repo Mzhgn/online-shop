@@ -1,5 +1,6 @@
 import React from "react";
 import { BsBagFill } from "react-icons/bs";
+import "./Navbar.css";
 
 function Navbar() {
   return (
@@ -9,7 +10,7 @@ function Navbar() {
           Moji Shop
         </a>
 
-        <ul className="navbar-nav me-auto-ms-3">
+        <ul className="navbar-nav me-auto ms-3">
           <li className="nav-item">
             <a href="#" className="nav-link">
               Home
