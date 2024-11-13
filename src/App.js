@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import ProductSection from "./Components/productsSections/ProductSection";
+import Toast from "./Components/Toast/Toast";
 import "./App.css";
 import products from "./data/Products";
 
@@ -18,6 +19,7 @@ export default function App() {
           ))}
         </div>
       </main>
+      <Toast />
     </div>
   );
 }
