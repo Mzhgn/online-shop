@@ -10,7 +10,7 @@ import productsContext from "./Contexts/ProductsContext";
 export default function App() {
   const [allProducts, setAllProducts] = useState(products);
   const [userCat, setUserCart] = useState([]);
-  const [isShowToast, setIsShowToast] = useState(false);
+  const [isShowToast, setIsShowToast] = useState(true);
   const [isShowCart, setIsShowCart] = useState(false);
   return (
     <div>
@@ -30,9 +30,8 @@ export default function App() {
         <main className="pb-5">
           <div className="container">
             <h1 className="text-center main-title">All Products</h1>
-            {allProducts.map(() => (
-              <ProductSection />
-            ))}
+
+            <ProductSection />
           </div>
         </main>
         <Toast />
