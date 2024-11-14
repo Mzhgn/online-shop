@@ -3,7 +3,7 @@ import React from "react";
 function Toast() {
   return (
     <div className="toast-container position-fixed bottom-0 me-4 end-0 mb-4">
-      <div className="toast show align-items-center  text-white bg-primary">
+      <div className="toast show  align-items-center  text-white bg-primary">
         <div className="d-flex justify-content-between align-items-center">
           <button
             type="button"
