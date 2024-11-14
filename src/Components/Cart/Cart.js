@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Cart.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsBag } from "react-icons/bs";
+import productsContext from "../../Contexts/ProductsContext";
 
 function Cart() {
+  const contextData = useContext(productsContext);
   return (
-    <aside className="bag-sidebar active">
+    <aside className={`${contextData.isShowCart ? "active" : ""} bag-sidebar `}>
       {/*  add activeclass to show bag sidebar*/}
       <h3 className="bag-title">
         {" "}
@@ -13,7 +15,12 @@ function Cart() {
           <BsBag /> Bag
         </span>
         <span>
-          <AiOutlineClose className="close-icon" />
+          <AiOutlineClose
+            className="close-icon"
+            onClick={() => {
+              contextData.setIsShowCart(false);
+            }}
+          />
         </span>
       </h3>
 
