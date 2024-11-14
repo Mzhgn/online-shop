@@ -1,6 +1,7 @@
 import React from "react";
 import "./Cart.css";
 import { AiOutlineClose } from "react-icons/ai";
+import { BsBag } from "react-icons/bs";
 
 function Cart() {
   return (
@@ -12,13 +13,13 @@ function Cart() {
           <BsBag /> Bag
         </span>
         <span>
-          <AiOutlineClose />
+          <AiOutlineClose className="close-icon" />
         </span>
       </h3>
 
       <div className="row bag-wrapper">
         <div className="col-12 mt-5">
-          <div className="cart-py-3 px-3">
+          <div className="card py-3 px-3">
             <div className="col-12 text-center">
               <img
                 src="./images/1.jpg"
