@@ -9,7 +9,7 @@ import productsContext from "./Contexts/ProductsContext";
 
 export default function App() {
   const [allProducts, setAllProducts] = useState(products);
-  const [userCat, setUserCart] = useState([]);
+  const [userCart, setUserCart] = useState([]);
   const [isShowToast, setIsShowToast] = useState(true);
   const [isShowCart, setIsShowCart] = useState(false);
   return (
@@ -17,7 +17,7 @@ export default function App() {
       <productsContext.Provider
         value={{
           allProducts,
-          userCat,
+          userCart,
           setUserCart,
           isShowToast,
           setIsShowToast,
