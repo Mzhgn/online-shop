@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
+import { BsBag } from "react-icons/bs";
 import "./Cart.css";
 import { AiOutlineClose } from "react-icons/ai";
-import { BsBag } from "react-icons/bs";
 import productsContext from "../../Contexts/ProductsContext";
 
 function Cart() {
   const contextData = useContext(productsContext);
   return (
     <aside className={`${contextData.isShowCart ? "active" : ""} bag-sidebar `}>
+      {" "}
       {/*  add activeclass to show bag sidebar*/}
       <h3 className="bag-title">
-        {" "}
         <span>
           <BsBag /> Bag
         </span>
@@ -23,7 +23,6 @@ function Cart() {
           />
         </span>
       </h3>
-
       <div className="row bag-wrapper">
         {contextData.userCart.map((product) => (
           <div className="col-12 mt-5" key={product.id}>

@@ -1,14 +1,9 @@
-.bag-sidebar.active {
-  right: 0;
-  opacity: 1;
-  visibility: visible;
-}
 .bag-sidebar {
   position: fixed;
   top: 0;
   right: -200px;
   width: 400px;
-  height: 100vh0;
+  height: 100vh;
   background-color: var(--white);
   padding: 20px;
   z-index: 999;
@@ -16,6 +11,11 @@
   transition: 0.5s ease;
   opacity: 0;
   visibility: hidden;
+}
+.bag-sidebar.active {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
 }
 .bag-title {
   display: flex;
