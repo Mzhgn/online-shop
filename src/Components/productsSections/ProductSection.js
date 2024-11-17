@@ -15,7 +15,7 @@ function ProductSection() {
               <div className="card py-3 px-3">
                 <div className="col-12 text-center">
                   <img
-                    src="/images/1.jpg"
+                    src={product.img}
                     alt="Product Image"
                     className="card-img-top w-75"
                   />
@@ -34,17 +34,33 @@ function ProductSection() {
                         contextData.setIsShowToast(false);
                       }, 3000);
 
-                      let newUserCartProduct = {
-                        id: contextData.userCart.length + 1,
-                        title: product.title,
-                        price: product.price,
-                        count: 1,
-                      };
+                      let isInUserCart = contextData.userCart.some(
+                        (item) => item.title === product.title
+                      );
 
-                      contextData.setUserCart((prevProduct) => [
-                        ...prevProduct,
-                        newUserCartProduct,
-                      ]);
+                      if (!isInUserCart) {
+                        let newUserCartProduct = {
+                          id: contextData.userCart.length + 1,
+                          title: product.title,
+                          price: product.price,
+                          count: 1,
+                        };
+
+                        contextData.setUserCart((prevProduct) => [
+                          ...prevProduct,
+                          newUserCartProduct,
+                        ]);
+                      } else {
+                        let userCart = [...contextData.userCart];
+
+                        userCart.some((item) => {
+                          if (item.title === product.title) {
+                            item.count += 1;
+                            return true;
+                          }
+                        });
+                        contextData.setUserCart(userCart);
+                      }
                     }}
                   >
                     Add to Cart

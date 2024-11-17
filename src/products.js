@@ -33,7 +33,7 @@ let products = [
         title: "MacBook Pro M1",
         price: 45_000_000,
         count: 12,
-        img: "/images/1.jpg",
+        img: "/images/mac.png",
       },
     ],
   },

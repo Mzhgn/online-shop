@@ -10,7 +10,7 @@ import productsContext from "./Contexts/ProductsContext";
 export default function App() {
   const [allProducts, setAllProducts] = useState(products);
   const [userCart, setUserCart] = useState([]);
-  const [isShowToast, setIsShowToast] = useState(true);
+  const [isShowToast, setIsShowToast] = useState(false);
   const [isShowCart, setIsShowCart] = useState(false);
   return (
     <div>
