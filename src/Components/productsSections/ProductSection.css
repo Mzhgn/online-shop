@@ -7,6 +7,12 @@
 .card:hover {
   border: 1px groove rgba(0, 0, 0, 0.5);
 }
+
+.product-image {
+  height: 260px;
+  object-fit: cover;
+  width: 100%;
+}
 .card-text {
   font-size: 15px;
   color: var(--dark);

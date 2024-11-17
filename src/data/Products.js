@@ -1,6 +1,6 @@
-const products = [
+const Products = [
   {
-    title: "Phone",
+    title: "Phones",
     info: [
       {
         id: 1,
@@ -12,33 +12,33 @@ const products = [
       {
         id: 2,
         title: "Xiomi A",
-        img: "./images/1.jpg",
+        img: "./images/xi.jfif",
         price: 10_000_000,
         count: 112,
       },
       {
         id: 3,
         title: "Iphone",
-        img: "./images/1.jpg",
+        img: "./images/iphone14.jfif",
         price: 70_000_000,
         count: 7,
       },
     ],
   },
   {
-    title: "Laptop",
+    title: "Laptops",
     info: [
       {
         id: 1,
         title: "Asus",
-        img: "./images/1.jpg",
+        img: "./images/asus.jpg",
         price: 27_000_000,
         count: 31,
       },
       {
         id: 2,
         title: "MacBook Pro",
-        img: "./images/1.jpg",
+        img: "./images/mac.jpg",
         price: 52_000_000,
         count: 12,
       },
@@ -46,4 +46,4 @@ const products = [
   },
 ];
 
-export default products;
+export default Products;

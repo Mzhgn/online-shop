@@ -3,7 +3,7 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 .navbar-brand {
-  color: var(--main-red);
+  color: var(--main-red) !important;
   transition: 0.4s;
 }
 .nav-item .nav-link {
