@@ -4,6 +4,42 @@ import productsContext from "../../Contexts/ProductsContext";
 
 function ProductSection() {
   const contextData = useContext(productsContext);
+
+  const addToCard = (product) => {
+    contextData.setIsShowToast(true);
+
+    setTimeout(() => {
+      contextData.setIsShowToast(false);
+    }, 3000);
+
+    let isInUserCart = contextData.userCart.some(
+      (item) => item.title === product.title
+    );
+
+    if (!isInUserCart) {
+      let newUserCartProduct = {
+        id: contextData.userCart.length + 1,
+        title: product.title,
+        price: product.price,
+        count: 1,
+      };
+
+      contextData.setUserCart((prevProduct) => [
+        ...prevProduct,
+        newUserCartProduct,
+      ]);
+    } else {
+      let userCart = [...contextData.userCart];
+
+      userCart.some((item) => {
+        if (item.title === product.title) {
+          item.count += 1;
+          return true;
+        }
+      });
+      contextData.setUserCart(userCart);
+    }
+  };
   return (
     <>
       {contextData.allProducts.map((productSection) => (
@@ -32,41 +68,7 @@ function ProductSection() {
                   <br />
                   <button
                     className="btn btn-danger"
-                    onClick={() => {
-                      contextData.setIsShowToast(true);
-
-                      setTimeout(() => {
-                        contextData.setIsShowToast(false);
-                      }, 3000);
-
-                      let isInUserCart = contextData.userCart.some(
-                        (item) => item.title === product.title
-                      );
-
-                      if (!isInUserCart) {
-                        let newUserCartProduct = {
-                          id: contextData.userCart.length + 1,
-                          title: product.title,
-                          price: product.price,
-                          count: 1,
-                        };
-
-                        contextData.setUserCart((prevProduct) => [
-                          ...prevProduct,
-                          newUserCartProduct,
-                        ]);
-                      } else {
-                        let userCart = [...contextData.userCart];
-
-                        userCart.some((item) => {
-                          if (item.title === product.title) {
-                            item.count += 1;
-                            return true;
-                          }
-                        });
-                        contextData.setUserCart(userCart);
-                      }
-                    }}
+                    onClick={() => addToCard(product)}
                   >
                     Add to Cart
                   </button>
