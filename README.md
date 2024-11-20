@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+## Description
+
+An online shop application built with React, styled with Bootstrap and React Icons. This project showcases the ability to create a functional e-commerce platform
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -64,7 +64,7 @@ function ProductSection() {
                 </div>
                 <div className="card-body text-center">
                   <p className="card-text">{product.title}</p>
-                  <p className="price">{product.price}$</p>
+                  <p className="price">{product.price.toLocaleString()}$</p>
                   <br />
                   <button
                     className="btn btn-danger"
