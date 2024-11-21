@@ -18,7 +18,7 @@ function Toast() {
               contextData.setIsShowToast(false);
             }}
           ></button>
-          <div className="toast-body"> محصول با موفقیت به سبد اضافه شد</div>
+          <div className="toast-body"> The item added to your cart</div>
         </div>
       </div>
     </div>
