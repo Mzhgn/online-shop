@@ -5,6 +5,10 @@ import productsContext from "../../Contexts/ProductsContext";
 
 function Navbar() {
   const contextData = useContext(productsContext);
+  const totalItems = contextData.userCart.reduce(
+    (acc, product) => acc + product.count,
+    0
+  );
   return (
     <nav className="navbar navbar-expand-sm py-3 d-flex">
       <div className="container">
@@ -28,7 +32,7 @@ function Navbar() {
                 contextData.setIsShowCart(true);
               }}
             />
-            <span className="bag-item-counter">0</span>
+            <span className="bag-item-counter">{totalItems}</span>
           </a>
         </div>
       </div>
