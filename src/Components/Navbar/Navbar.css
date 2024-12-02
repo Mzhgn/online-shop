@@ -18,8 +18,8 @@
   top: 0;
   right: 0;
   transform: translate(140%, 2px);
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   background-color: var(--main-white);
   color: var(--main-red);
   border-radius: 100%;
@@ -27,4 +27,5 @@
   justify-content: center;
   align-items: center;
   font-size: 10px;
+  font-weight: bold;
 }
